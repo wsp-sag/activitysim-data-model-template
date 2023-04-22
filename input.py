@@ -119,7 +119,7 @@ class Household(BaseModel):
 
     id: int
     persons: List[Person]
-    income_in_aud2019: float
+    income_in_usd2011: float
     home_location: int
 
     @property
@@ -130,7 +130,7 @@ class Household(BaseModel):
         """
         quartile = 1
         for break_point in p.income_quartile_breakpoints_in_usd2011:
-            if self.income_in_aud2019 < break_point:
+            if self.income_in_usd2011 < break_point:
                 return quartile
 
     @property

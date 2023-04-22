@@ -8,10 +8,8 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 import enums as e
-from input import (
-    Household as InputHousehold,
-    Person as InputPerson,
-)
+from input import Household as InputHousehold
+from input import Person as InputPerson
 
 
 class Trip(BaseModel):
@@ -31,10 +29,8 @@ class Trip(BaseModel):
 
 class Tour(BaseModel):
     """
-
     Relevant variables for ActivitySim `tours` output data file.
     Customize as needed for your application.
-
     """
 
     id: int
@@ -49,10 +45,8 @@ class Tour(BaseModel):
 
 class Person(InputPerson):
     """
-
     Relevant variables for ActivitySim `persons` output data file.
     Customize as needed for your application.
-
     """
 
     usual_work_location: Optional[int]
@@ -62,10 +56,8 @@ class Person(InputPerson):
 
 class JointTour(Tour):
     """
-
     Relevant variables for ActivitySim `joint_tours` output data file.
     Customize as needed for your application.
-
     """
 
     participants: List[Person]
@@ -73,10 +65,8 @@ class JointTour(Tour):
 
 class Household(InputHousehold):
     """
-
     Relevant variables for ActivitySim `household` output data file.
     Customize as needed for your application.
-
     """
 
     joint_tours: Optional[List[JointTour]] = None

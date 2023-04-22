@@ -10,7 +10,6 @@ class PersonType(IntEnum):
     """
     Provides integer mapping to the person type variable. A person type is
     used as a co-variate in numerous ActivitySim modules to explain behavior.
-
     """
 
     FULL_TIME_WORKER = 1
