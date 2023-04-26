@@ -1,0 +1,8 @@
+# Mac OS things
+.DS_Store
+
+# Compiled Python
+__pycache__/*
+
+# Large example files
+example_input/*
