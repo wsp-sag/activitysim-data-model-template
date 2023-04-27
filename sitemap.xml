@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://wsp-sag.github.io/activitysim-data-model-template/</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wsp-sag.github.io/activitysim-data-model-template/enumerations/</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wsp-sag.github.io/activitysim-data-model-template/example-01/</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wsp-sag.github.io/activitysim-data-model-template/input/</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wsp-sag.github.io/activitysim-data-model-template/output/</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wsp-sag.github.io/activitysim-data-model-template/parameters/</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>

@@ -1,0 +1,1453 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://wsp-sag.github.io/activitysim-data-model-template/input/">
+      
+      
+        <link rel="prev" href="../parameters/">
+      
+      
+        <link rel="next" href="../output/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Input - ActivitySim Data Model Template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="grey">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#input_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ActivitySim Data Model Template" class="md-header__button md-logo" aria-label="ActivitySim Data Model Template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ActivitySim Data Model Template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Input
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="grey"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wsp-sag/activitysim-data-model-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../enumerations/" class="md-tabs__link">
+      Enumerations
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../parameters/" class="md-tabs__link">
+      Parameters
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Input
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../output/" class="md-tabs__link">
+      Output
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../example-01/" class="md-tabs__link">
+      Example-01
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ActivitySim Data Model Template" class="md-nav__button md-logo" aria-label="ActivitySim Data Model Template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ActivitySim Data Model Template
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wsp-sag/activitysim-data-model-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enumerations/" class="md-nav__link">
+        Enumerations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameters/" class="md-nav__link">
+        Parameters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Input
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Input
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.Household" class="md-nav__link">
+    Household
+  </a>
+  
+    <nav class="md-nav" aria-label="Household">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input.Household.household_size" class="md-nav__link">
+    household_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input.Household.income_quartile" class="md-nav__link">
+    income_quartile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.HouseholdValidator" class="md-nav__link">
+    HouseholdValidator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.Person" class="md-nav__link">
+    Person
+  </a>
+  
+    <nav class="md-nav" aria-label="Person">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input.Person.gender" class="md-nav__link">
+    gender
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.PersonValidator" class="md-nav__link">
+    PersonValidator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.TazValidator" class="md-nav__link">
+    TazValidator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.TravelAnalysisZoneData" class="md-nav__link">
+    TravelAnalysisZoneData
+  </a>
+  
+    <nav class="md-nav" aria-label="TravelAnalysisZoneData">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input.TravelAnalysisZoneData.employment_total" class="md-nav__link">
+    employment_total
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input.TravelAnalysisZoneData.parking_cost_is_too_high" class="md-nav__link">
+    parking_cost_is_too_high()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output/" class="md-nav__link">
+        Output
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example-01/" class="md-nav__link">
+        Example-01
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.Household" class="md-nav__link">
+    Household
+  </a>
+  
+    <nav class="md-nav" aria-label="Household">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input.Household.household_size" class="md-nav__link">
+    household_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input.Household.income_quartile" class="md-nav__link">
+    income_quartile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.HouseholdValidator" class="md-nav__link">
+    HouseholdValidator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.Person" class="md-nav__link">
+    Person
+  </a>
+  
+    <nav class="md-nav" aria-label="Person">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input.Person.gender" class="md-nav__link">
+    gender
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.PersonValidator" class="md-nav__link">
+    PersonValidator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.TazValidator" class="md-nav__link">
+    TazValidator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input.TravelAnalysisZoneData" class="md-nav__link">
+    TravelAnalysisZoneData
+  </a>
+  
+    <nav class="md-nav" aria-label="TravelAnalysisZoneData">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input.TravelAnalysisZoneData.employment_total" class="md-nav__link">
+    employment_total
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input.TravelAnalysisZoneData.parking_cost_is_too_high" class="md-nav__link">
+    parking_cost_is_too_high()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="input_1">Input<a class="headerlink" href="#input_1" title="Permanent link"> ¶</a></h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+<a id="input"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Data Model for ActivitySim Inputs</p>
+<p>Instructions: customize these example values for your own ActivitySim implementation</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="input.Household" class="doc doc-heading">
+        <code>Household</code>
+
+
+<a href="#input.Household" class="headerlink" title="Permanent link"> ¶</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>Household data from PopulationSim and input to ActivitySim.
+Customize as needed for your application.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>input.py</code></summary>
+          <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Household</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Household data from PopulationSim and input to ActivitySim.</span>
+<span class="sd">    Customize as needed for your application.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">persons</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Person</span><span class="p">]</span>
+    <span class="n">income_in_usd2011</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">home_location</span><span class="p">:</span> <span class="nb">int</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">income_quartile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create income quartiles from the income using the</span>
+<span class="sd">        `income_quartile_breakpoints_in_aud2019` Parameter</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">quartile</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">break_point</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">income_quartile_breakpoints_in_usd2011</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">income_in_usd2011</span> <span class="o">&lt;</span> <span class="n">break_point</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">quartile</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">household_size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Number of persons in the household from the persons array length</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">persons</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="input.Household.household_size" class="doc doc-heading">
+<code class="codehilite language-python"><span class="n">household_size</span><span class="p">:</span> <span class="nb">int</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#input.Household.household_size" class="headerlink" title="Permanent link"> ¶</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of persons in the household from the persons array length</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="input.Household.income_quartile" class="doc doc-heading">
+<code class="codehilite language-python"><span class="n">income_quartile</span><span class="p">:</span> <span class="nb">int</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#input.Household.income_quartile" class="headerlink" title="Permanent link"> ¶</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create income quartiles from the income using the
+<code>income_quartile_breakpoints_in_aud2019</code> Parameter</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="input.HouseholdValidator" class="doc doc-heading">
+        <code>HouseholdValidator</code>
+
+
+<a href="#input.HouseholdValidator" class="headerlink" title="Permanent link"> ¶</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>Helper class to validate a list of households.
+See the example notebooks for details on how this works.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>input.py</code></summary>
+          <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">HouseholdValidator</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Helper class to validate a list of households.</span>
+<span class="sd">    See the example notebooks for details on how this works.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">list_of_households</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Household</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="input.Person" class="doc doc-heading">
+        <code>Person</code>
+
+
+<a href="#input.Person" class="headerlink" title="Permanent link"> ¶</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>Person data from PopulationSim and input to ActivitySim.
+Customize as needed for your application.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>input.py</code></summary>
+          <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Person data from PopulationSim and input to ActivitySim.</span>
+<span class="sd">    Customize as needed for your application.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">sex</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">Gender</span>
+    <span class="n">person_type</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">PersonType</span>
+    <span class="n">occupation</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">Occupation</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">gender</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">e</span><span class="o">.</span><span class="n">Gender</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sex is used as a proxy for gender in the travel model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sex</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="input.Person.gender" class="doc doc-heading">
+<code class="codehilite language-python"><span class="n">gender</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">Gender</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#input.Person.gender" class="headerlink" title="Permanent link"> ¶</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sex is used as a proxy for gender in the travel model</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="input.PersonValidator" class="doc doc-heading">
+        <code>PersonValidator</code>
+
+
+<a href="#input.PersonValidator" class="headerlink" title="Permanent link"> ¶</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>Helper class to validate a list of persons.
+See the example notebooks for details on how this works.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>input.py</code></summary>
+          <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PersonValidator</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Helper class to validate a list of persons.</span>
+<span class="sd">    See the example notebooks for details on how this works.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">list_of_persons</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Person</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="input.TazValidator" class="doc doc-heading">
+        <code>TazValidator</code>
+
+
+<a href="#input.TazValidator" class="headerlink" title="Permanent link"> ¶</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>Helper class to validate a list of zonal data.
+See the example notebooks for details on how this works.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>input.py</code></summary>
+          <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">TazValidator</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Helper class to validate a list of zonal data.</span>
+<span class="sd">    See the example notebooks for details on how this works.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">list_of_zones</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TravelAnalysisZoneData</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="input.TravelAnalysisZoneData" class="doc doc-heading">
+        <code>TravelAnalysisZoneData</code>
+
+
+<a href="#input.TravelAnalysisZoneData" class="headerlink" title="Permanent link"> ¶</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>TAZ or socio-economic data. Customize as needed for your application.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>input.py</code></summary>
+          <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">TravelAnalysisZoneData</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    TAZ or socio-economic data. Customize as needed for your application.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">centroid_latitude</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
+    <span class="n">centroid_longitude</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
+    <span class="n">households</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">household_population</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_agriculture</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_mining</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_utilities</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_construction</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_manufacturing</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_wholesale</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_retail</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_transport</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_communication</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_finance</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_rental</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_professional</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_administrative</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_education</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_health</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_social</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_accommodation</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_public_administration</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">employment_other</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">enrollment_secondary</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">enrollment_primary</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">enrollment_tertiary</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">parking_cost_per_hour_usd2019</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">area_type</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">AreaType</span>
+    <span class="n">valid_values_for_internal_travel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span>
+        <span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">maximum_internal_zone_number</span>
+    <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">employment_total</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is an example of how to compute a new variable from the variables defined above.</span>
+<span class="sd">        In this case `employment_total` is the sum across employment categories.</span>
+<span class="sd">        Modify as needed and add other variables as desired.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">employment_agriculture</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_mining</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_construction</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_manufacturing</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_wholesale</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_retail</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_transport</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_communication</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_finance</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_rental</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_professional</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_administrative</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_education</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_health</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_social</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_accommodation</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_public_administration</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">employment_other</span>
+        <span class="p">)</span>
+
+    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;parking_cost_per_hour_usd2019&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">parking_cost_is_too_high</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is an example of of a custom validation method. In this case,</span>
+<span class="sd">        the method returns an error if `parking_cost_per_hour_usd2019` is higher than</span>
+<span class="sd">        the value set in the `parameters` file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">maximum_parking_cost_per_hour</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parking cost too high&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="input.TravelAnalysisZoneData.employment_total" class="doc doc-heading">
+<code class="codehilite language-python"><span class="n">employment_total</span><span class="p">:</span> <span class="nb">float</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#input.TravelAnalysisZoneData.employment_total" class="headerlink" title="Permanent link"> ¶</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>This is an example of how to compute a new variable from the variables defined above.
+In this case <code>employment_total</code> is the sum across employment categories.
+Modify as needed and add other variables as desired.</p>
+  </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="input.TravelAnalysisZoneData.parking_cost_is_too_high" class="doc doc-heading">
+<code class="codehilite language-python"><span class="n">parking_cost_is_too_high</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+
+<a href="#input.TravelAnalysisZoneData.parking_cost_is_too_high" class="headerlink" title="Permanent link"> ¶</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>This is an example of of a custom validation method. In this case,
+the method returns an error if <code>parking_cost_per_hour_usd2019</code> is higher than
+the value set in the <code>parameters</code> file.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>input.py</code></summary>
+        <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;parking_cost_per_hour_usd2019&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">parking_cost_is_too_high</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is an example of of a custom validation method. In this case,</span>
+<span class="sd">    the method returns an error if `parking_cost_per_hour_usd2019` is higher than</span>
+<span class="sd">    the value set in the `parameters` file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">maximum_parking_cost_per_hour</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parking cost too high&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.annotate", "content.tabs.link", "navigation.indexes"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
