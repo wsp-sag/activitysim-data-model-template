@@ -50,7 +50,7 @@ nav:
   - Parameters: parameters.md
   - Input: input.md
   - Output: output.md
-  - Example-01: "/activitysim-data-model-template/examples/example-01.ipynb"
+  - Example-01: example-01.ipynb
 
 extra:
   version:
