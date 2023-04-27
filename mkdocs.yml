@@ -50,7 +50,7 @@ nav:
   - Parameters: parameters.md
   - Input: input.md
   - Output: output.md
-  - Example-01: "/github/workspace/docs/examples/example-01.html"
+  - Example-01: "/examples/example-01.html"
 
 extra:
   version:
