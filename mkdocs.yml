@@ -2,7 +2,7 @@ site_name: "ActivitySim Data Model Template"
 site_url: https://wsp-sag.github.io/activitysim-data-model-template
 repo_url: https://github.com/wsp-sag/activitysim-data-model-template
 
-use_directory_urls: false
+# use_directory_urls: false
 
 theme:
   name: material
